@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from 'react-bootstrap/Card';
 
 import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
@@ -9,8 +10,8 @@ export default function Filter() {
     const [inStockOnly, setInStockOnly] = useState(false);
 
     return (
-        <div>
-            <h2>Grocery List</h2>
+        <Card style={{width: '100%', padding: '40px'}}>
+            <h2>Food Mart</h2>
 
             <SearchBar 
                 filterText={filterText} 
@@ -25,6 +26,6 @@ export default function Filter() {
                 filterText={filterText}
                 inStockOnly={inStockOnly}   
             />
-        </div>
+        </Card>
     )    
 }
