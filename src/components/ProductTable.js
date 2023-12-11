@@ -46,8 +46,8 @@ export default function ProductTable({filterText, inStockOnly}) {
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th style={styles.tableCategories}>ITEM</th>
-                    <th style={styles.tableCategories}>PRICE ($)</th>
+                    <th width="300" style={styles.tableCategories}>ITEM</th>
+                    <th width="200" style={styles.tableCategories}>PRICE ($)</th>
                 </tr>
             </thead>
             <tbody>{rows}</tbody>

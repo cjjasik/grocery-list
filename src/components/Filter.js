@@ -11,8 +11,16 @@ export default function Filter() {
 
     const styles = {
         card: {
-            width: '100%',
+            width: '500px',
             padding: '40px',
+            marginLeft: "auto",
+            marginRight: "auto",
+            position: 'absolute', 
+            top: '50%', 
+            left: '50%', 
+            transform: 'translate(-50%, -50%)',
+
+            
         },
         foodMartTitle: {
             textAlign: "center",
