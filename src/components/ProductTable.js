@@ -7,6 +7,14 @@ export default function ProductTable({filterText, inStockOnly}) {
     let lastCategory = null;
 
     groceries.forEach((grocery) => {
+        if (
+            grocery.name.toLowerCase().indexOf(
+              filterText.toLowerCase()
+            ) === -1
+          ) {
+            return null;
+          }
+
         if (inStockOnly && !grocery.stocked) {
             return null;
         }
