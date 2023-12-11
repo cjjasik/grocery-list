@@ -1,4 +1,3 @@
-// should hold SearchBar + ProductTable
 import SearchBar from "./SearchBar"
 import ProductTable from "./ProductTable"
 
