@@ -1,10 +1,15 @@
 export default function ProductCategoryRow({category}) {
+    
+    const styles ={
+        categoryTitle: {
+            textAlign: "center",
+        }
+    }
+    
     return (
         <tr>
-            <th>
-                <th colSpan="2">
-                    {category}
-                </th>
+            <th colSpan={2} style={styles.categoryTitle}>
+                {category.toUpperCase()}
             </th>
         </tr>
     );

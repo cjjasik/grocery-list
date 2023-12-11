@@ -8,6 +8,13 @@ export default function ProductTable({filterText, inStockOnly}) {
     const rows = [];
     let lastCategory = null;
 
+    const styles ={
+        tableCategories: {
+            textAlign: "center",
+            fontSize: "18px"
+        }
+    }
+
     groceries.forEach((grocery) => {
         if (
             grocery.name.toLowerCase().indexOf(
@@ -39,8 +46,8 @@ export default function ProductTable({filterText, inStockOnly}) {
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>ITEM</th>
-                    <th>PRICE</th>
+                    <th style={styles.tableCategories}>ITEM</th>
+                    <th style={styles.tableCategories}>PRICE ($)</th>
                 </tr>
             </thead>
             <tbody>{rows}</tbody>

@@ -1,4 +1,13 @@
 export default function SearchBar({filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange}) {
+    
+    // TO DO: PUT CHECKED BOX TO THE LEFT, CLOSER TO TABLE
+    const styles ={
+        filterCheckedBox: {
+            paddingLeft: '20px',
+            paddingTop: '20px'
+        }
+    }
+    
     return (
         <>
 

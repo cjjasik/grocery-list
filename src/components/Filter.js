@@ -9,9 +9,20 @@ export default function Filter() {
     const [filterText, setFilterText] = useState('');
     const [inStockOnly, setInStockOnly] = useState(false);
 
+    const styles = {
+        card: {
+            width: '100%',
+            padding: '40px',
+        },
+        foodMartTitle: {
+            textAlign: "center",
+            fontWeight: "100px"
+        }
+    }
+
     return (
-        <Card style={{width: '100%', padding: '40px'}}>
-            <h2>Food Mart</h2>
+        <Card style={styles.card}>
+            <Card.Title as='h1' style={styles.foodMartTitle}>FOOD MART</Card.Title>
 
             <SearchBar 
                 filterText={filterText} 
