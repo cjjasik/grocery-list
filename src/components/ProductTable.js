@@ -2,11 +2,14 @@ import { groceries } from "../Groceries";
 import ProductCategoryRow from "./ProductCategoryRow";
 import ProductRow from "./ProductRow";
 
-export default function ProductTable() {
+export default function ProductTable({filterText, inStockOnly}) {
     const rows = [];
     let lastCategory = null;
 
     groceries.forEach((grocery) => {
+        if (inStockOnly && !grocery.stocked) {
+            return null;
+        }
         if (grocery.category !== lastCategory) {
             rows.push(
                 <ProductCategoryRow 
